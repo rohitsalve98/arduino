@@ -1,0 +1,20 @@
+int intesity = 0;
+
+int i = 0;
+
+void setup()
+{
+  pinMode(6, OUTPUT);
+}
+
+void loop()
+{
+  for (intesity = 0; intesity <= 255; intesity += 5) {
+    analogWrite(6, intesity);
+    delay(50); // Wait for 50 millisecond(s)
+  }
+  for (intesity = 255; intesity >= 0; intesity -= 5) {
+    analogWrite(6, intesity);
+    delay(50); // Wait for 50 millisecond(s)
+  }
+}
